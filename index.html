@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -9,8 +10,63 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="shortcut icon" href="./assets/imgs/favicon.ico" type="image/x-icon">
   </head>
+
   <body>
-    Here is some text.
+
+    <nav>
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/slothwerks/" title="Visit SlothWerks on LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="mailto:contact@slothwerks.com" title="Shoot us an email">
+          <i class="far fa-envelope"></i>
+          <span>Email</span>
+        </a>
+        <a href="mailto:contact@slothwerks.com" title="Give us a call">
+            <i class="fas fa-phone"></i>
+          <span>Phone</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="content-container">
+
+      <!-- Initial View -->
+      <div class="landing-page">
+        <div class="code-container">
+          <button type="button" onclick="showTechCalendar()">Code</button>
+        </div>
+        <div class="communication-container">
+          <img class="logo" src="./assets/imgs/logo.png" alt="The SlothWerks logo is a stylized face of a sloth wearing headphones." />
+          <button type="button" onclick="showArchives()">Communication</button>
+        </div>
+        <div class="community-container">
+            <button type="button" onclick="showCommunityCalendar()">Community</button>
+        </div>
+      </div>
+
+      <!-- Grand Circus Tech Calendar -->
+      <div class="tech-calendar">
+
+      </div>
+
+      <!-- SlothWerks Archives -->
+      <div class="slothwerks-archives">
+
+      </div>
+
+      <!-- ENA Community Calendar -->
+      <div class="community-calendar">
+
+      </div>
+
+    </div>
+
+    <footer><i class="far fa-copyright"></i> SlothWerks LLC</footer>
+
     <script src="./assets/js/script.js"></script>
+
   </body>
+
 </html>
