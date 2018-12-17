@@ -1,0 +1,38 @@
+/* Global Resets */
+
+form, input, textarea, button, p, div, header, footer, main, section, nav, ul, ol, li, h1, h2, h3, h4, a {
+  box-sizing: border-box; /* Ensures padding is not included for width calculations */
+  margin: 0; /* Kill default values defined by the browser */
+  padding: 0; /* Kill default values defined by the browser */
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* No default list style for lists */
+ol, ul {
+	list-style: none;
+}
+
+/* No default spacing for table cells */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Kill default values for a tags */
+a { 
+  font-weight: normal;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* General Style Declarations */
+
+body {
+  font-family: "Raleway", "Tahoma", "Geneva", sans-serif;
+}
+
