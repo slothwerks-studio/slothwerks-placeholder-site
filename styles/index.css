@@ -1,9 +1,24 @@
+/* Font Imports */
+
+@font-face {
+  font-family: "Raleway";
+  src: local(Raleway),
+       url('https://fonts.googleapis.com/css?family=Raleway');
+}
+
+@font-face {
+  font-family: "Rabbid Highway Sign II";
+  src: local(RabbidHighwaySignII),
+       url('./assets/fonts/RabbidHighwaySignII.otf') format("opentype");
+}
+
 /* Global Resets */
 
-form, input, textarea, button, p, div, header, footer, main, section, nav, ul, ol, li, h1, h2, h3, h4, a {
+form, input, textarea, button, p, div, header, footer, main, section, nav, audio, ul, ol, li, h1, h2, h3, h4, a, span {
   box-sizing: border-box; /* Ensures padding is not included for width calculations */
   margin: 0; /* Kill default values defined by the browser */
   padding: 0; /* Kill default values defined by the browser */
+  font-family: inherit;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -34,4 +49,8 @@ a {
 
 body {
   font-family: "Raleway", "Tahoma", "Geneva", sans-serif;
+}
+
+.hidden {
+  display: none;
 }
