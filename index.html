@@ -30,11 +30,11 @@
           <span class="label">Calendly</span>
         </a>
         <a href="mailto:contact@slothwerks.com" title="Shoot us an email">
-            <span class="icon"><i class="far fa-envelope"></i></span>
+          <span class="icon"><i class="far fa-envelope"></i></span>
           <span class="label">Email</span>
         </a>
         <a href="tel:616-258-6179" title="Give us a call">
-            <span class="icon"><i class="fas fa-phone"></i></span>
+          <span class="icon"><i class="fas fa-phone"></i></span>
           <span class="label">Phone</span>
         </a>
       </div>
@@ -42,21 +42,21 @@
 
     <nav>
       <div class="controls">
-        <button type="button" onclick="showTechCalendar()">Code</button>
-        <button type="button" onclick="showArchives()">Communication</button>
-        <button type="button" onclick="showCommunityCalendar()">Community</button>
+        <button id="code-button" type="button" onclick="showTechCalendar()">Code</button>
+        <button id="communication-button" type="button" onclick="showArchives()">Communication</button>
+        <button id="community-button" type="button" onclick="showCommunityCalendar()">Community</button>
       </div>
     </nav>
 
     <div class="content-container">
 
       <!-- Initial View -->
-      <div class="landing-page-logo">
+      <div id="landing-page-logo">
         <img class="logo" src="./assets/imgs/logo.png" alt="The SlothWerks logo is a stylized face of a sloth wearing headphones." />
       </div>
 
       <!-- Grand Circus Tech Calendar -->
-      <div class="tech-calendar hidden">
+      <div id="tech-calendar" class="hidden">
         <a href="https://calendar.google.com/calendar/embed?src=uhj6b9q35gtr5c60ml7utsid80%40group.calendar.google.com&ctz=America%2FNew_York" target="_blank" title="Open this calendar in a new window">
           <i class="fas fa-external-link-alt"></i>
           New Window
@@ -80,7 +80,7 @@
       </div>
 
       <!-- SlothWerks Archives -->
-      <div class="slothwerks-archives hidden">
+      <div id="audio-archives" class="hidden">
         <button type="button" class="audio-button hack-show-2016" onclick="showAudioPlayer()"><span>The Sloth Psychedelic HACK! Show (2016)</span></button>
         <button type="button" class="audio-button psychedelic-breakfast" onclick="showAudioPlayer()"><span>Sloth's Psychedelic Breakfast (2007)</span></button>
         <button type="button" class="audio-button arabian-nights" onclick="showAudioPlayer()"><span>1001 Arabian Nights (2005)</span></button>
@@ -88,8 +88,8 @@
       </div>
 
       <!-- Audio Player -->
-      <div class="audio-player-container hidden">
-        <div class="audio-player hack-show-2016 hidden">
+      <div id="audio-player-container" class="hidden">
+        <div class="audio-player hidden" id="hack-show-2016-player">
           <audio controls>
             <source src="https://www.slothwerks.com/media/new/sloth-psychedelic-hack-show-2016.mp3" type="audio/mp3">
             <p class="no-audio-support">
@@ -97,7 +97,7 @@
             </p>
           </audio>
         </div>
-        <div class="audio-player psychedelic-breakfast hidden">
+        <div id="audio-player hidden" id="psychedelic-breakfast-player">
           <audio controls>
             <source src="https://www.slothwerks.com/media/new/sloth-psychedelic-breakfast.mp3" type="audio/mp3">
             <p class="no-audio-support">
@@ -105,7 +105,7 @@
             </p>
           </audio>
         </div>
-        <div class="audio-player arabian-nights hidden">
+        <div class="audio-player hidden" id="arabian-nights-player">
           <audio controls>
             <source src="https://www.slothwerks.com/media/new/1001-arabian-nights.mp3" type="audio/mp3">
             <p class="no-audio-support">
@@ -113,7 +113,7 @@
             </p>
           </audio>
         </div>
-        <div class="audio-player arco-iris hidden">
+        <div class="audio-player hidden" id="arco-iris-player">
           <audio controls>
             <source src="https://www.slothwerks.com/media/new/live-at-arco-iris.mp3" type="audio/mp3">
             <p class="no-audio-support">
@@ -124,7 +124,7 @@
       </div>
 
       <!-- ENA Community Calendar -->
-      <div class="community-calendar hidden">
+      <div id="ena-calendar" class="hidden">
         <a href="https://calendar.google.com/calendar/embed?src=g0kdapqkqpi4h880u3gnbtg7qg%40group.calendar.google.com&ctz=America%2FNew_York" target="_blank" title="Open this calendar in a new window">
           <i class="fas fa-external-link-alt"></i>
           New Window
@@ -151,7 +151,7 @@
 
     <footer><i class="far fa-copyright"></i> SlothWerks LLC</footer>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/index.js"></script>
 
   </body>
 
