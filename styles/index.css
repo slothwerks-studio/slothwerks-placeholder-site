@@ -1,15 +1,9 @@
 /* Font Imports */
 
 @font-face {
-  font-family: "Raleway";
-  src: local(Raleway),
-       url('https://fonts.googleapis.com/css?family=Raleway');
-}
-
-@font-face {
   font-family: "Rabbid Highway Sign II";
   src: local(RabbidHighwaySignII),
-       url('./assets/fonts/RabbidHighwaySignII.otf') format("opentype");
+    url('./../assets/fonts/RabbidHighwaySignII.otf') format("opentype");
 }
 
 /* Global Resets */
@@ -48,11 +42,15 @@ a {
 /* General Style Declarations */
 
 body {
-  font-family: "Raleway", "Tahoma", "Geneva", sans-serif;
+  font-family: Raleway, Tahoma, Geneva, sans-serif;
 }
 
 .hidden {
   display: none;
+}
+
+.image-container img {
+  width: 100%; /* Assumes a flexed image container: fill to width of container */
 }
 
 /* Header Bar */
@@ -83,7 +81,7 @@ header {
   height: 100%; /* Fill height of container */
 }
 
-.nav-links {
+.header-links {
   height: 100%; /* Fill height of container */
   display: flex;
   flex-direction: row;
@@ -92,17 +90,74 @@ header {
 
 }
 
-.nav-links a {
+.header-links a {
   flex-direction: column;
   align-items: center;
   margin-left: 4em;
 }
 
-.nav-links .icon {
+.header-links .icon {
   font-size: 3em;
   color: black /* To be determined */
 }
 
-.nav-links .label {
-  display: none; /* Possibly to be used for wider screenwidths?
+.header-links .label {
+  display: none; /* Possibly to be used for wider screenwidths? */
+}
+
+/* Navigation */
+
+nav {
+  width: 100%;
+  font-family: "Rabbid Highway Sign II", "Arial Black", "Arial Bold", Gadget, sans-serif;
+  padding: 3em;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls button {
+  border: 0;
+  padding: 0;
+  background-color: inherit;
+  color: inherit; /* To be determined */
+  font-size: 3em;
+  cursor: pointer;
+}
+
+/* Landing Page Logo */
+
+#landing-page-logo {
+  width: 100%;
+}
+
+#landing-page-logo .content-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+#landing-page-logo .image-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Footer */
+
+footer {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 3em;
+}
+
+.copyright {
+  font-size: 1em;
+  color: inherit /* To be determined */
 }

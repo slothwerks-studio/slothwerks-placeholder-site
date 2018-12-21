@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>SlothWerks :: Custom Web and Mobile App Development</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link href="./styles/index.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="shortcut icon" href="./assets/imgs/favicon.ico" type="image/x-icon">
@@ -16,7 +17,7 @@
       <div class="header-logo">
         <img class="logo-text-only" src="./assets/imgs/logo-text-only.png" alt="SlothWerks" />
       </div>
-      <div class="nav-links">
+      <div class="header-links">
         <a href="https://www.linkedin.com/in/slothwerks/" title="Visit SlothWerks on LinkedIn">
           <span class="icon"><i class="fab fa-linkedin-in"></i></span>
           <span class="label">LinkedIn</span>
@@ -42,9 +43,9 @@
 
     <nav>
       <div class="controls">
-        <button id="code-button" type="button" onclick="showTechCalendar()">Code</button>
-        <button id="communication-button" type="button" onclick="showArchives()">Communication</button>
-        <button id="community-button" type="button" onclick="showCommunityCalendar()">Community</button>
+        <button id="code-button" type="button" onclick="showTechCalendar()">Code<span>.</span></button>
+        <button id="communication-button" type="button" onclick="showArchives()">Communication<span>.</span></button>
+        <button id="community-button" type="button" onclick="showCommunityCalendar()">Community<span>.</span></button>
       </div>
     </nav>
 
@@ -52,7 +53,11 @@
 
       <!-- Initial View -->
       <div id="landing-page-logo">
-        <img class="logo" src="./assets/imgs/logo.png" alt="The SlothWerks logo is a stylized face of a sloth wearing headphones." />
+        <div class="content-container">
+          <div class="image-container">
+            <img class="logo" src="./assets/imgs/logo.png" alt="The SlothWerks logo is a stylized face of a sloth wearing headphones." />
+          </div>
+        </div>
       </div>
 
       <!-- Grand Circus Tech Calendar -->
@@ -71,7 +76,7 @@
         </button>
         <iframe 
           class="calendar-container" 
-          src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=uhj6b9q35gtr5c60ml7utsid80%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=America%2FNew_York" 
+          src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=uhj6b9q35gtr5c60ml7utsid80%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=America%2FNew_York" 
           width="800" 
           height="600" 
           frameborder="0" 
@@ -149,7 +154,11 @@
 
     </div>
 
-    <footer><i class="far fa-copyright"></i> SlothWerks LLC</footer>
+    <footer>
+      <div class="copyright">
+        <i class="far fa-copyright"></i> SlothWerks LLC
+      </div>
+    </footer>
 
     <script src="./assets/js/index.js"></script>
 
