@@ -54,3 +54,55 @@ body {
 .hidden {
   display: none;
 }
+
+/* Header Bar */
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 3em;
+  background-color: inherit; /* To be determined */
+}
+
+/* Header logo only visible on mobile */
+@media screen and (min-width: 414px) {
+  .logo-text-only {
+    display: none;
+  }
+}
+
+.header-logo {
+  height: 100%; /* Fill height of container */
+}
+
+.logo-text-only {
+  height: 100%; /* Fill height of container */
+}
+
+.nav-links {
+  height: 100%; /* Fill height of container */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+.nav-links a {
+  flex-direction: column;
+  align-items: center;
+  margin-left: 4em;
+}
+
+.nav-links .icon {
+  font-size: 3em;
+  color: black /* To be determined */
+}
+
+.nav-links .label {
+  display: none; /* Possibly to be used for wider screenwidths?
+}
