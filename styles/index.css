@@ -147,6 +147,61 @@ nav {
   max-width: 600px;
 }
 
+/* Calendar Styles */
+
+#tech-calendar, #community-calendar {
+  width: 100%
+}
+
+.calendar-frame {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+.calendar-frame .content-container {
+  width: 100%;
+  max-width: 828px; /* 800px for calendar; 20px total padding and 8px total border width */
+  position: relative; /* For positioning of close button */
+  padding: 10px;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+
+.calendar-close-button {
+  position: absolute; /* With respect to container */
+  border: 1px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; /* To be determined */
+  color: inherit; /* to be determined */
+  font-size: 2em;
+  right: -17px; /* Half of button size and half of border of container */
+  top: -17px; /* Half of button size half of border of container */
+  cursor: pointer;
+}
+
+.calendar-close-button span {
+  display: none; /* Not displaying text for the moment */
+}
+
+.calendar-frame .content-container .controls {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.calendar-frame .content-container .controls a {
+  font-size: 1em;
+  color: inherit; /* To be determined */
+  margin-right: 2em;
+}
+
 /* Footer */
 
 footer {
