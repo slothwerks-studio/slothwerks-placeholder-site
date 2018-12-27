@@ -161,8 +161,7 @@ nav {
 }
 
 .calendar-frame .content-container {
-  width: 100%;
-  max-width: 828px; /* 800px for calendar; 20px total padding and 8px total border width */
+  width: 828px; /* 800px for calendar; 20px total padding and 8px total border width */
   position: relative; /* For positioning of close button */
   padding: 10px;
   border: 4px solid black;
@@ -200,6 +199,84 @@ nav {
   font-size: 1em;
   color: inherit; /* To be determined */
   margin-right: 2em;
+}
+
+/* Audio Archives Styles */
+
+#audio-archives {
+  width: 100%
+}
+
+.archives-frame {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+.archives-frame .content-container {
+  width: 828px; /* 800px for inner content; 20px total padding and 8px total border width */
+  position: relative; /* For positioning of close button */
+  padding: 10px 10px 0 10px;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+
+.archives-close-button {
+  position: absolute; /* With respect to container */
+  border: 1px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; /* To be determined */
+  color: inherit; /* to be determined */
+  font-size: 2em;
+  right: -17px; /* Half of button size and half of border of container */
+  top: -17px; /* Half of button size half of border of container */
+  cursor: pointer;
+}
+
+.archives-close-button span {
+  display: none; /* Not displaying text for the moment */
+}
+
+#now-playing {
+  margin-bottom: 10px;
+}
+
+.audio-archives-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.audio-player-container {
+  width: auto;
+}
+
+.audio-player {
+  width: 100%;
+}
+
+.media-selection-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.audio-button {
+  width: 49%;
+  height: 300px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 /* Footer */

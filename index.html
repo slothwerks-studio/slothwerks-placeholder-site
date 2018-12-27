@@ -92,49 +92,70 @@
 
       <!-- SlothWerks Archives -->
       <div id="audio-archives" class="hidden">
-        <button type="button" onclick="closeAudioArchives()">
-          <i class="far fa-times-circle"></i>
-          <span>Close</span>
-        </button>
-        <button type="button" class="audio-button hack-show-2016" onclick="showAudioPlayer()"><span>The Sloth Psychedelic HACK! Show (2016)</span></button>
-        <button type="button" class="audio-button psychedelic-breakfast" onclick="showAudioPlayer()"><span>Sloth's Psychedelic Breakfast (2007)</span></button>
-        <button type="button" class="audio-button arabian-nights" onclick="showAudioPlayer()"><span>1001 Arabian Nights (2005)</span></button>
-        <button type="button" class="audio-button arco-iris" onclick="showAudioPlayer()"><span>Sloth and Eric Newton Live at Arco Iris (1999)</span></button>
-      </div>
+        <div class="archives-frame">
+          <div class="content-container">
 
-      <!-- Audio Player -->
-      <div id="audio-player-container" class="hidden">
-        <div class="audio-player hidden" id="hack-show-2016-player">
-          <audio controls>
-            <source src="https://www.slothwerks.com/media/new/sloth-psychedelic-hack-show-2016.mp3" type="audio/mp3">
-            <p class="no-audio-support">
-              Your browser doesn't support HTML5 audio. Here is a <a href="https://www.slothwerks.com/media/new/sloth-psychedelic-hack-show-2016.mp3">link to the audio</a> instead.
+            <button class="archives-close-button" type="button" onclick="closeAudioArchives()">
+              <i class="far fa-times-circle"></i>
+              <span>Close</span>
+            </button>
+
+            <p id="now-playing">
+              Now playing: The Sloth Psychedelic HACK! Show (2016)
             </p>
-          </audio>
-        </div>
-        <div id="audio-player hidden" id="psychedelic-breakfast-player">
-          <audio controls>
-            <source src="https://www.slothwerks.com/media/new/sloth-psychedelic-breakfast.mp3" type="audio/mp3">
-            <p class="no-audio-support">
-              Your browser doesn't support HTML5 audio. Here is a <a href="https://www.slothwerks.com/media/new/sloth-psychedelic-breakfast.mp3">link to the audio</a> instead.
-            </p>
-          </audio>
-        </div>
-        <div class="audio-player hidden" id="arabian-nights-player">
-          <audio controls>
-            <source src="https://www.slothwerks.com/media/new/1001-arabian-nights.mp3" type="audio/mp3">
-            <p class="no-audio-support">
-              Your browser doesn't support HTML5 audio. Here is a <a href="https://www.slothwerks.com/media/new/1001-arabian-nights.mp3">link to the audio</a> instead.
-            </p>
-          </audio>
-        </div>
-        <div class="audio-player hidden" id="arco-iris-player">
-          <audio controls>
-            <source src="https://www.slothwerks.com/media/new/live-at-arco-iris.mp3" type="audio/mp3">
-            <p class="no-audio-support">
-              Your browser doesn't support HTML5 audio. Here is a <a href="https://www.slothwerks.com/media/new/live-at-arco-iris.mp3">link to the audio</a> instead.
-            </p>
-          </audio>
+
+            <div class="audio-archives-wrapper">
+
+              <div class="audio-player-container">
+
+                <div class="audio-player" id="hack-show-2016">
+                  <audio controls>
+                    <source src="https://www.slothwerks.com/media/new/sloth-psychedelic-hack-show-2016.mp3" type="audio/mp3">
+                    <p class="no-audio-support">
+                      Your browser doesn't support HTML5 audio. Here is a <a href="https://www.slothwerks.com/media/new/sloth-psychedelic-hack-show-2016.mp3">link to the audio</a> instead.
+                    </p>
+                  </audio>
+                </div>
+      
+                <div class="audio-player hidden" id="psychedelic-breakfast">
+                  <audio controls>
+                    <source src="https://www.slothwerks.com/media/new/sloth-psychedelic-breakfast.mp3" type="audio/mp3">
+                    <p class="no-audio-support">
+                      Your browser doesn't support HTML5 audio. Here is a <a href="https://www.slothwerks.com/media/new/sloth-psychedelic-breakfast.mp3">link to the audio</a> instead.
+                    </p>
+                  </audio>
+                </div>
+      
+                <div class="audio-player hidden" id="arabian-nights">
+                  <audio controls>
+                    <source src="https://www.slothwerks.com/media/new/1001-arabian-nights.mp3" type="audio/mp3">
+                    <p class="no-audio-support">
+                      Your browser doesn't support HTML5 audio. Here is a <a href="https://www.slothwerks.com/media/new/1001-arabian-nights.mp3">link to the audio</a> instead.
+                    </p>
+                  </audio>
+                </div>
+      
+                <div class="audio-player hidden" id="arco-iris">
+                  <audio controls>
+                    <source src="https://www.slothwerks.com/media/new/live-at-arco-iris.mp3" type="audio/mp3">
+                    <p class="no-audio-support">
+                      Your browser doesn't support HTML5 audio. Here is a <a href="https://www.slothwerks.com/media/new/live-at-arco-iris.mp3">link to the audio</a> instead.
+                    </p>
+                  </audio>
+                </div>
+      
+              </div>
+
+              <div class="media-selection-container">
+                <button type="button" class="audio-button hack-show-2016" onclick="showAudioPlayer('hack-show-2016')"><span>The Sloth Psychedelic HACK! Show (2016)</span></button>
+                <button type="button" class="audio-button psychedelic-breakfast" onclick="showAudioPlayer('psychedelic-breakfast')"><span>Sloth's Psychedelic Breakfast (2007)</span></button>
+                <button type="button" class="audio-button arabian-nights" onclick="showAudioPlayer('arabian-nights')"><span>1001 Arabian Nights (2005)</span></button>
+                <button type="button" class="audio-button arco-iris" onclick="showAudioPlayer('arco-iris')"><span>Sloth and Eric Newton Live at Arco Iris (1999)</span></button>
+              </div>
+
+            </div>
+
+          </div>
         </div>
       </div>
 
