@@ -39,6 +39,11 @@ a {
   color: inherit;
 }
 
+/* Kill outlines in Chrome and Firefox for a tags, buttons, and input boxes */
+button, a, input, textarea {
+  outline: none;
+}
+
 /* General Style Declarations */
 
 body {
@@ -277,6 +282,46 @@ nav {
   height: 300px;
   margin-bottom: 10px;
   cursor: pointer;
+}
+
+.audio-button span.matte {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  color: transparent;
+}
+
+.audio-button:hover span.matte {
+  background-color: rgba(255,255,255,0.5);
+}
+
+.audio-button:hover span.content {
+  width: 70%;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: left;
+  padding: 10px;
+}
+
+button.hack-show-2016 {
+  background: center / contain no-repeat url("../assets/imgs/hack-show-2016.jpg");
+}
+
+button.psychedelic-breakfast {
+  background: center / contain no-repeat url("../assets/imgs/psychedelic-breakfast.jpg");
+}
+
+button.arabian-nights {
+  background: center / contain no-repeat url("../assets/imgs/arabian-nights.jpg");
+}
+
+button.arco-iris {
+  background: center / contain no-repeat url("../assets/imgs/arco-iris.jpg");
 }
 
 /* Footer */
