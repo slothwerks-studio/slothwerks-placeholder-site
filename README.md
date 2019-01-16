@@ -38,5 +38,9 @@ Mobile-first, as always.  Since design is not a specialty, we will likely partne
 
 If we use a [color wheel](https://www.sessions.edu/color-calculator/), we can use our logo to create a tetradic palette for the site.
 
-Primary color in logo:  <span style="color: #d46b29">Brown</span>
-Associated tetradic colors:  <span style="color: #2976d4">Blue</span>, <span style="color: #ac29d4">Purple</span>, and <span style="color: #d4c029">Maize</span>.
+Primary color in logo:  Brown (#d46b29).
+
+Associated tetradic colors:  
+* Blue (#2976d4)
+* Purple (#ac29d4)
+* Maize (#d4c029)
