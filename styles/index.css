@@ -1,3 +1,16 @@
+/* 
+
+[[ Responsive Breakpoints ]]
+
+320px ... minimum width of app; smaller cell phone
+414px ... wider contemporary cell phone
+768px ... tablet in portrait mode
+1024px ... non-widescreen desktop; tablet in landscape mode
+1366px ... widescreen desktop
+1920px ... high-definition display
+
+*/
+
 /* Font Imports */
 
 @font-face {
@@ -13,6 +26,12 @@ form, input, textarea, button, p, div, header, footer, main, section, nav, audio
   margin: 0; /* Kill default values defined by the browser */
   padding: 0; /* Kill default values defined by the browser */
   font-family: inherit;
+}
+
+/* Kill default padding for body */
+body {
+  padding: 0;
+  margin: 0;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -48,6 +67,12 @@ button, a, input, textarea {
 
 body {
   font-family: Raleway, Tahoma, Geneva, sans-serif;
+  /* Add mobile-friendly styles */
+  width: 100%;
+  min-height: 100vh; /* Maximumize to height of viewing window */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hidden {
@@ -61,277 +86,45 @@ body {
 /* Header Bar */
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  height: 100px;
+  width: 100%;
+  height: 30px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 1em 3em;
+  align-items: center;
   background-color: inherit; /* To be determined */
 }
 
-/* Header logo only visible on mobile */
-@media screen and (min-width: 414px) {
-  .logo-text-only {
-    display: none;
-  }
-}
-
 .header-logo {
-  height: 100%; /* Fill height of container */
+  height: 80%;
 }
 
 .logo-text-only {
-  height: 100%; /* Fill height of container */
-}
-
-.header-links {
-  height: 100%; /* Fill height of container */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-
-}
-
-.header-links a {
-  flex-direction: column;
-  align-items: center;
-  margin-left: 4em;
-}
-
-.header-links .icon {
-  font-size: 3em;
-  color: black /* To be determined */
-}
-
-.header-links .label {
-  display: none; /* Possibly to be used for wider screenwidths? */
+  height: 100%; /* Controlled by flexed container */
 }
 
 /* Navigation */
 
 nav {
   width: 100%;
-  font-family: "Rabbid Highway Sign II", "Arial Black", "Arial Bold", Gadget, sans-serif;
-  padding: 3em;
-}
-
-.controls {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.controls button {
-  border: 0;
-  padding: 0;
-  background-color: inherit;
-  color: inherit; /* To be determined */
-  font-size: 3em;
-  cursor: pointer;
-}
-
-/* Landing Page Logo */
-
-#landing-page-logo {
-  width: 100%;
-}
-
-#landing-page-logo .content-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 2em;
-}
-
-#landing-page-logo .image-container {
-  width: 100%;
-  max-width: 600px;
-}
-
-/* Calendar Styles */
-
-#tech-calendar, #community-calendar {
-  width: 100%
-}
-
-.calendar-frame {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 2em;
-}
-
-.calendar-frame .content-container {
-  width: 828px; /* 800px for calendar; 20px total padding and 8px total border width */
-  position: relative; /* For positioning of close button */
-  padding: 10px;
-  border: 4px solid black;
-  border-radius: 10px;
-}
-
-.calendar-close-button {
-  position: absolute; /* With respect to container */
-  border: 1px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white; /* To be determined */
-  color: inherit; /* to be determined */
-  font-size: 2em;
-  right: -17px; /* Half of button size and half of border of container */
-  top: -17px; /* Half of button size half of border of container */
-  cursor: pointer;
-}
-
-.calendar-close-button span {
-  display: none; /* Not displaying text for the moment */
-}
-
-.calendar-frame .content-container .controls {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-}
-
-.calendar-frame .content-container .controls a {
-  font-size: 1em;
-  color: inherit; /* To be determined */
-  margin-right: 2em;
-}
-
-/* Audio Archives Styles */
-
-#audio-archives {
-  width: 100%
-}
-
-.archives-frame {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 2em;
-}
-
-.archives-frame .content-container {
-  width: 828px; /* 800px for inner content; 20px total padding and 8px total border width */
-  position: relative; /* For positioning of close button */
-  padding: 10px 10px 0 10px;
-  border: 4px solid black;
-  border-radius: 10px;
-}
-
-.archives-close-button {
-  position: absolute; /* With respect to container */
-  border: 1px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white; /* To be determined */
-  color: inherit; /* to be determined */
-  font-size: 2em;
-  right: -17px; /* Half of button size and half of border of container */
-  top: -17px; /* Half of button size half of border of container */
-  cursor: pointer;
-}
-
-.archives-close-button span {
-  display: none; /* Not displaying text for the moment */
-}
-
-#now-playing {
-  margin-bottom: 10px;
-}
-
-.audio-archives-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: start;
-}
-
-.audio-player-container {
-  width: auto;
-}
-
-.audio-player {
-  width: 100%;
-}
-
-.media-selection-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: start;
-  flex: 1;
-  margin-left: 10px;
-}
-
-.audio-button {
-  width: 49%;
-  height: 300px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.audio-button span.matte {
+  height: calc(100vh - 30px); /* Full height of viewing area less header */
+  position: absolute;
+  top: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: start;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.3);
-  color: transparent;
+  justify-content: space-between;
 }
 
-.audio-button:hover span.matte {
-  background-color: rgba(255,255,255,0.5);
-}
-
-.audio-button:hover span.content {
-  width: 70%;
-  color: black;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-align: left;
-  padding: 10px;
-}
-
-button.hack-show-2016 {
-  background: center / contain no-repeat url("../assets/imgs/hack-show-2016.jpg");
-}
-
-button.psychedelic-breakfast {
-  background: center / contain no-repeat url("../assets/imgs/psychedelic-breakfast.jpg");
-}
-
-button.arabian-nights {
-  background: center / contain no-repeat url("../assets/imgs/arabian-nights.jpg");
-}
-
-button.arco-iris {
-  background: center / contain no-repeat url("../assets/imgs/arco-iris.jpg");
+.content-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 /* Footer */
 
 footer {
-  height: 60px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 3em;
+  width: 100%;
 }
 
 .copyright {
