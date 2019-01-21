@@ -18,9 +18,13 @@
         <img class="logo-text-only" src="./assets/imgs/logo-text-only.png" alt="SlothWerks" />
       </div>
       <div class="menu-button-container">
-        <button type="button" class="menu-button" onclick="toggleMenu()">
+        <button id="openMenuButton" type="button" class="menu-button" onclick="toggleMenu()">
           <span class="icon"><i class="fas fa-bars"></i></span>
           <span class="label">Menu</span>
+        </button>
+        <button id="closeMenuButton" type="button" class="menu-button hidden" onclick="toggleMenu()">
+          <span class="icon"><i class="far fa-times-circle"></i></span>
+          <span class="label">Close</span>
         </button>
       </div>
     </header>
@@ -28,11 +32,13 @@
     <nav id="menu" class="hidden">
       <ul>
         <li>
-          <span class="icon"><i class="fas fa-info-circle"></i></span>
-          <span class="label">What is SlothWerks?</span>
+          <span class="menu-item-container">
+            <span class="icon"><i class="fas fa-info-circle"></i></span>
+            <span class="label">What is SlothWerks?</span>
+          </span>
         </li>
         <li>
-          <span class="icon-container">
+          <span class="menu-item-container">
             <span class="icon">
               <img 
                 src="./assets/imgs/grand-circus.png" 
@@ -43,7 +49,7 @@
           </span>
         </li>
         <li>
-          <span class="icon-container">
+          <span class="menu-item-container">
             <span class="icon">
               <img 
                 src="./assets/imgs/ena.png" 
@@ -54,81 +60,87 @@
           </span>
         </li>
         <li>
-          <span class="icon"><i class="fas fa-music"></i></span>
-          <span class="label">Audio Archives</span>
+          <span class="menu-item-container">
+            <span class="icon"><i class="fas fa-music"></i></span>
+            <span class="label">Audio Archives</span>
+          </span>
         </li>
-        <li>
-          <a href="https://calendly.com/slothwerks/coffee-meeting/" title="Schedule a Coffee Meeting on Calendly">
+        <li onclick="toggleMenu()">
+          <a class="menu-item-container" href="https://calendly.com/slothwerks/coffee-meeting/" title="Schedule a Coffee Meeting on Calendly">
             <span class="icon"><i class="far fa-calendar-plus"></i></span>
             <span class="label">Schedule a Coffee Meeting</span>
           </a>
         </li>
-        <li>
-          <a href="https://www.linkedin.com/in/slothwerks/" title="Connect with SlothWerks on LinkedIn">
+        <li onclick="toggleMenu()">
+          <a class="menu-item-container" href="https://www.linkedin.com/in/slothwerks/" title="Connect with SlothWerks on LinkedIn">
             <span class="icon"><i class="fab fa-linkedin-in"></i></span>
             <span class="label">Connect on LinkedIn</span>
           </a>
         </li>
-        <li>
-          <a href="https://github.com/slothwerks-studio" title="SlothWerks Studio on GitHub">
+        <li onclick="toggleMenu()">
+          <a class="menu-item-container" href="https://github.com/slothwerks-studio" title="SlothWerks Studio on GitHub">
             <span class="icon"><i class="fab fa-github"></i></span>
             <span class="label">SlothWerks Studio on GitHub</span>
           </a>
         </li>
-        <li>
-          <a href="mailto:contact@slothwerks.com" title="Send us an email">
+        <li onclick="toggleMenu()">
+          <a class="menu-item-container" href="mailto:contact@slothwerks.com" title="Send us an email">
             <span class="icon"><i class="far fa-envelope"></i></span>
             <span class="label">Send an Email</span>
           </a>
         </li>
-        <li>
-          <a href="tel:616-258-6179" title="Give us a call">
+        <li onclick="toggleMenu()">
+          <a class="menu-item-container" href="tel:616-258-6179" title="Give us a call">
             <span class="icon"><i class="fas fa-phone"></i></span>
-            <span class="label">Call or Text</span>
+            <span class="label">Call SlothWerks</span>
           </a>
         </li>
       </ul>
     </nav>
 
-    <div class="content-container">
-      <h1>Lorem ipsum</h1>
-      <p>
-        Lorem ipsum dolor sit amet, ei eruditi recusabo mel, ad utinam intellegat concludaturque vix, sea ei vocibus ocurreret. Sed at labitur discere persecuti, sea option detracto id. Sensibus instructior mel ut. Mutat maluisset duo ne, mei an nobis torquatos signiferumque, at pri quod timeam blandit.
-      </p>
-      <p>
-        Adipisci voluptatum cotidieque mea ad. Id clita praesent pro, ius no errem eripuit scriptorem, facer corrumpit interpretaris id quo. Nam eu labitur vivendo verterem, ludus labore fastidii sed et. Eripuit accusam luptatum per ut, eum te justo causae partiendo, reque accommodare ullamcorper pro te. Cu errem alterum vulputate eos, mel putant epicurei laboramus ei, nibh doctus sed te.
-      </p>
-      <p>        
-        Sanctus similique sit ad, vis te impedit conclusionemque. Wisi voluptua intellegam at vix, debet aliquam reprehendunt ei per. Cum reque utinam petentium ad, id eam agam prodesset, has ad quem suavitate. Illum regione te nam, id vix viris dictas legimus, ius eu mentitum urbanitas definitiones. Iudico diceret at cum, natum euismod te pri, id soleat sanctus sadipscing mea. His autem adipisci te, habeo impedit cu est, dictas iriure his ex.
-      </p>
-      <p>        
-        Mel cu quidam legendos adipisci. Ex percipit detraxit pri. Facete feugiat fabulas usu at, mea solet feugiat in. In cum assum fuisset, ea saepe invidunt ullamcorper vim.
-      </p>
-      <p>       
-        Modus eripuit definitionem eos et, vix viris possim dolorem ei, te usu sale partiendo. Vix affert mediocrem no, cum diam causae pericula ex, delectus posidonium pri ea. Quot diceret indoctum nec ad, nec ea meliore inermis, his error discere ex. At cum paulo dolorum, vix ad alii quas. Cu pri prima voluptatum. Nam utroque insolens concludaturque ea, eos ex assum liber contentiones. At iusto impetus alterum nam, cibo adolescens consectetuer et ius.
-      </p>
-      <p>        
-        Pro ad quot graecis aliquando, no mea elitr aperiam, at qui nonumy cetero aliquid. Eius verear est te. Et dicit praesent usu, nam ex amet mazim aperiri, eu integre expetenda eos. Eam eu vocent erroribus. Est te solet verear erroribus. Ut adhuc antiopam eum.
-      </p>
-      <p>       
-        Vim id perpetua vituperata. Movet dictas eum ex, ad ius mazim fabulas instructior. Et sed inani singulis mnesarchum, mei facilis delicatissimi cu. Esse veri suavitate mei id, vix an ubique deseruisse. Per viris quando aliquam ne.
-      </p>
-      <p>       
-        Pro ei autem placerat accusamus, quo ne idque labore oporteat. Ut vix zril appetere forensibus, stet lorem delenit duo et. Mea sensibus conceptam ne, prima invenire his ad. Quaestio similique rationibus te vel.
-      </p>
-      <p>        
-        Per id noluisse recteque. Mel ea epicuri dignissim, sed sint graeci aperiri eu, debet accommodare ea eum. Veniam pertinax eu pri, per ne utroque tincidunt contentiones, vis posse tacimates splendide at. Eu exerci apeirian adversarium per, et sit quem aperiam.
-      </p>
-      <p>       
-        Ne putent aperiri repudiare mea, et has novum mundi incorrupte. Duo virtute fabulas ut. Eu nobis legimus delicatissimi pro, vim odio essent epicurei an, cu has senserit definiebas. Ex est reque deserunt. Vix ad blandit deterruisset, tollit voluptatum ei nam.
-      </p>
-    </div>
+    <div id="contentContainer" class="content-container">
 
-    <footer>
-      <div class="copyright">
-        <i class="far fa-copyright"></i> SlothWerks LLC
+      <div class="content">
+        <h1>Lorem ipsum</h1>
+        <p>
+          Lorem ipsum dolor sit amet, ei eruditi recusabo mel, ad utinam intellegat concludaturque vix, sea ei vocibus ocurreret. Sed at labitur discere persecuti, sea option detracto id. Sensibus instructior mel ut. Mutat maluisset duo ne, mei an nobis torquatos signiferumque, at pri quod timeam blandit.
+        </p>
+        <p>
+          Adipisci voluptatum cotidieque mea ad. Id clita praesent pro, ius no errem eripuit scriptorem, facer corrumpit interpretaris id quo. Nam eu labitur vivendo verterem, ludus labore fastidii sed et. Eripuit accusam luptatum per ut, eum te justo causae partiendo, reque accommodare ullamcorper pro te. Cu errem alterum vulputate eos, mel putant epicurei laboramus ei, nibh doctus sed te.
+        </p>
+        <p>        
+          Sanctus similique sit ad, vis te impedit conclusionemque. Wisi voluptua intellegam at vix, debet aliquam reprehendunt ei per. Cum reque utinam petentium ad, id eam agam prodesset, has ad quem suavitate. Illum regione te nam, id vix viris dictas legimus, ius eu mentitum urbanitas definitiones. Iudico diceret at cum, natum euismod te pri, id soleat sanctus sadipscing mea. His autem adipisci te, habeo impedit cu est, dictas iriure his ex.
+        </p>
+        <p>        
+          Mel cu quidam legendos adipisci. Ex percipit detraxit pri. Facete feugiat fabulas usu at, mea solet feugiat in. In cum assum fuisset, ea saepe invidunt ullamcorper vim.
+        </p>
+        <p>       
+          Modus eripuit definitionem eos et, vix viris possim dolorem ei, te usu sale partiendo. Vix affert mediocrem no, cum diam causae pericula ex, delectus posidonium pri ea. Quot diceret indoctum nec ad, nec ea meliore inermis, his error discere ex. At cum paulo dolorum, vix ad alii quas. Cu pri prima voluptatum. Nam utroque insolens concludaturque ea, eos ex assum liber contentiones. At iusto impetus alterum nam, cibo adolescens consectetuer et ius.
+        </p>
+        <p>        
+          Pro ad quot graecis aliquando, no mea elitr aperiam, at qui nonumy cetero aliquid. Eius verear est te. Et dicit praesent usu, nam ex amet mazim aperiri, eu integre expetenda eos. Eam eu vocent erroribus. Est te solet verear erroribus. Ut adhuc antiopam eum.
+        </p>
+        <p>       
+          Vim id perpetua vituperata. Movet dictas eum ex, ad ius mazim fabulas instructior. Et sed inani singulis mnesarchum, mei facilis delicatissimi cu. Esse veri suavitate mei id, vix an ubique deseruisse. Per viris quando aliquam ne.
+        </p>
+        <p>       
+          Pro ei autem placerat accusamus, quo ne idque labore oporteat. Ut vix zril appetere forensibus, stet lorem delenit duo et. Mea sensibus conceptam ne, prima invenire his ad. Quaestio similique rationibus te vel.
+        </p>
+        <p>        
+          Per id noluisse recteque. Mel ea epicuri dignissim, sed sint graeci aperiri eu, debet accommodare ea eum. Veniam pertinax eu pri, per ne utroque tincidunt contentiones, vis posse tacimates splendide at. Eu exerci apeirian adversarium per, et sit quem aperiam.
+        </p>
+        <p>       
+          Ne putent aperiri repudiare mea, et has novum mundi incorrupte. Duo virtute fabulas ut. Eu nobis legimus delicatissimi pro, vim odio essent epicurei an, cu has senserit definiebas. Ex est reque deserunt. Vix ad blandit deterruisset, tollit voluptatum ei nam.
+        </p>
       </div>
-    </footer>
+
+      <footer id="foooter">
+        <div class="copyright">
+          <i class="far fa-copyright"></i> SlothWerks LLC
+        </div>
+      </footer>
+
+    </div>
 
     <script src="./assets/js/index.js"></script>
 
