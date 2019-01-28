@@ -83,6 +83,10 @@ body {
   width: 100%; /* Assumes a flexed image container: fill to width of container */
 }
 
+a {
+  color: #D46B29
+}
+
 /* Header Bar */
 
 header {
@@ -217,6 +221,40 @@ nav ul li .label {
   flex-direction: column;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Calendar Pages */
+
+.calendar-info {
+  margin: 20px 0;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.calendar-info h1 {
+  font-family: "Rabbid Highway Sign II", "Arial Black", "Arial Bold", Gadget, sans-serif;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.calendar-info h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #AC29D4;
+  margin-bottom: 15px;
+}
+
+.calendar-info p {
+  margin-bottom: 15px;
+}
+
+.calendar-info ul {
+  margin-bottom: 15px;
+  padding-left: 15px;
+}
+
+.list-icon {
+  margin-right: 5px;
 }
 
 /* Footer */
