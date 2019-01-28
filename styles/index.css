@@ -84,7 +84,8 @@ body {
 }
 
 a {
-  color: #D46B29
+  color: #D46B29;
+  font-weight: 600;
 }
 
 /* Header Bar */
@@ -229,6 +230,10 @@ nav ul li .label {
   margin: 20px 0;
   width: 100%;
   padding: 0 10px;
+}
+
+.calendar-info:last-child {
+  margin-bottom: 0;
 }
 
 .calendar-info h1 {
