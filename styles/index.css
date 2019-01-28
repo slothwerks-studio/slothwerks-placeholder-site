@@ -83,11 +83,6 @@ body {
   width: 100%; /* Assumes a flexed image container: fill to width of container */
 }
 
-a {
-  color: #D46B29;
-  font-weight: 600;
-}
-
 /* Header Bar */
 
 header {
@@ -191,8 +186,13 @@ nav ul li .label {
 .content {
   width: 100%;
   flex-grow: 1; /* Stretch to fill container */
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.content a {
+  color: #D46B29;
+  font-weight: 600;
 }
 
 /* Landing Page */
@@ -224,42 +224,64 @@ nav ul li .label {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* Calendar Pages */
+/* Content Pages */
 
-.calendar-info {
+.content-info {
   margin: 20px 0;
   width: 100%;
   padding: 0 10px;
 }
 
-.calendar-info:last-child {
+.content-info:last-child {
   margin-bottom: 0;
 }
 
-.calendar-info h1 {
+.content-info h1 {
   font-family: "Rabbid Highway Sign II", "Arial Black", "Arial Bold", Gadget, sans-serif;
   font-size: 1.3em;
   margin-bottom: 15px;
 }
 
-.calendar-info h2 {
+.content-info h2 {
   font-size: 1.2em;
   font-weight: 600;
   color: #AC29D4;
   margin-bottom: 15px;
 }
 
-.calendar-info p {
+.content-info p {
   margin-bottom: 15px;
 }
 
-.calendar-info ul {
+.content-info ul {
   margin-bottom: 15px;
   padding-left: 15px;
 }
 
 .list-icon {
   margin-right: 5px;
+}
+
+/* Audio Archives */
+
+.archives-wrapper {
+  margin: 20px 0;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.archives-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.archives-wrapper h1 {
+  font-family: "Rabbid Highway Sign II", "Arial Black", "Arial Bold", Gadget, sans-serif;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.archives-wrapper p {
+  margin-bottom: 15px;
 }
 
 /* Footer */

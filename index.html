@@ -14,7 +14,7 @@
   <body>
 
     <header>
-      <div class="header-logo">
+      <div class="header-logo" onclick="navigation('landing')">
         <img class="logo-text-only" src="./assets/imgs/logo-text-only.png" alt="SlothWerks" />
       </div>
       <div class="menu-button-container">
@@ -31,13 +31,13 @@
 
     <nav id="menu" class="hidden">
       <ul>
-        <li>
+        <li onclick="navigation('about')">
           <span class="menu-item-container">
             <span class="icon"><i class="fas fa-info-circle"></i></span>
             <span class="label">What is SlothWerks?</span>
           </span>
         </li>
-        <li>
+        <li onclick="navigation('techCalendar')">
           <span class="menu-item-container">
             <span class="icon">
               <img 
@@ -48,7 +48,7 @@
             <span class="label">Grand Circus Tech Calendar</span>
           </span>
         </li>
-        <li>
+        <li onclick="navigation('enaCalendar')">
           <span class="menu-item-container">
             <span class="icon">
               <img 
@@ -59,7 +59,7 @@
             <span class="label">ENA Community Calendar</span>
           </span>
         </li>
-        <li>
+        <li onclick="navigation('audioArchives')">
           <span class="menu-item-container">
             <span class="icon"><i class="fas fa-music"></i></span>
             <span class="label">Audio Archives</span>
@@ -100,7 +100,7 @@
 
     <div id="contentContainer" class="content-container">
 
-      <!-- <div id="landing" class="content">
+      <div id="landing" class="content">
         <div class="landing-titles">
           <div class="image-mask">
             <span>Code.</span>
@@ -108,10 +108,19 @@
             <span>Community.</span>
           </div>
         </div>
-      </div> -->
+      </div>
 
-      <!-- <div id="tech-calendar" class="content">
-        <div class="calendar-info">
+      <div id="about" class="content hidden">
+        <div class="content-info">
+          <h1>About SlothWerks</h1>
+          <p>Located in <a href="https://www.grandrapidsmi.gov/" title="City of Grand Rapids, Michigan">Grand Rapids, Michigan</a>, SlothWerks provides web and mobile application development and user experience consultation services.</p>
+          <p>We harness twenty years of technical experience to craft solutions for both commerical and non-profit clients throughout West Michigan.</p>
+          <p>Contact SlothWerks by phone at <a href="tel:616-258-6179" title="Give us a call">616.258.6179</a> or by email at <a href="mailto:contact@slothwerks.com" title="Send us an email">contact@slothwerks.com</a>.</p>
+       </div>
+      </div>
+
+      <div id="techCalendar" class="content hidden">
+        <div class="content-info">
           <h1>Grand Circus Tech Calendar</h1>
           <p>
             SlothWerks maintains a calendar of tech-related events occurring largely in the downtown area of Grand Rapids.
@@ -121,7 +130,7 @@
               <span class="list-icon">
                 <i class="fas fa-external-link-alt"></i> 
               </span>
-              <a href="https://calendar.google.com/calendar/embed?src=uhj6b9q35gtr5c60ml7utsid80%40group.calendar.google.com&ctz=America%2FNew_York&showTitle=0&showPrint=0&showTabs=0">
+              <a href="https://calendar.google.com/calendar/embed?src=uhj6b9q35gtr5c60ml7utsid80%40group.calendar.google.com&ctz=America%2FNew_York&showTitle=0&showPrint=0&showTabs=0" title="View event calendar">
                 View event calendar
               </a>
             </li>
@@ -129,24 +138,24 @@
               <span class="list-icon">
                 <i class="far fa-calendar-plus"></i>
               </span> 
-              <a href="https://calendar.google.com/calendar/ical/uhj6b9q35gtr5c60ml7utsid80%40group.calendar.google.com/public/basic.ics">
+              <a href="https://calendar.google.com/calendar/ical/uhj6b9q35gtr5c60ml7utsid80%40group.calendar.google.com/public/basic.ics" title="Add to Google Calendar">
                 Add to Google Calendar
               </a>
             </li>
           </ul>
           <h2>About Grand Circus</h2>
           <p>
-            <a href="https://www.grandcircus.co/">Grand Circus</a> is a tech career training organization based in Detroit, Michigan.  They also maintain a campus at <a href="http://startgarden.com/">Start Garden</a> in Grand Rapids, Michigan.
+            <a href="https://www.grandcircus.co/" title="Grand Circus Tech Training">Grand Circus</a> is a tech career training organization based in Detroit, Michigan.  They also maintain a campus at <a href="http://startgarden.com/" title="The Start Garden Ecosystem Initiative">Start Garden</a> in Grand Rapids, Michigan.
           </p>
           <h2>Intro to Code Workshops</h2>
           <p>
-            SlothWerks provides instruction for Grand Circus' monthly <a href="https://www.grandcircus.co/evening-weekend-tech-skills-workshops/">Intro to Coding workshops</a>.  Find a workshop near you on the <a href="https://www.grandcircus.co/calendar/">Grand Circus events calendar</a>.
+            SlothWerks provides instruction for Grand Circus' monthly <a href="https://www.grandcircus.co/evening-weekend-tech-skills-workshops/" title="Grand Circus Coding Workshops">Intro to Coding workshops</a>.  Find a workshop near you on the <a href="https://www.grandcircus.co/calendar/" title="Grand Circus Event Calendar">Grand Circus events calendar</a>.
           </p>
         </div>
-      </div> -->
+      </div>
 
-      <div id="ena-calendar" class="content">
-        <div class="calendar-info">
+      <div id="enaCalendar" class="content hidden">
+        <div class="content-info">
           <h1>ENA Community Calendar</h1>
           <p>
             SlothWerks maintains a calendar of family-friendly (and usually free) community events occurring in the Eastgate neighborhood and throughout the city in Grand Rapids, Michigan.
@@ -156,7 +165,7 @@
               <span class="list-icon">
                 <i class="fas fa-external-link-alt"></i> 
               </span>
-              <a href="https://calendar.google.com/calendar/embed?src=g0kdapqkqpi4h880u3gnbtg7qg%40group.calendar.google.com&ctz=America%2FNew_York&showTitle=0&showPrint=0&showTabs=0">
+              <a href="https://calendar.google.com/calendar/embed?src=g0kdapqkqpi4h880u3gnbtg7qg%40group.calendar.google.com&ctz=America%2FNew_York&showTitle=0&showPrint=0&showTabs=0" title="View event calendar">
                 View event calendar
               </a>
             </li>
@@ -164,19 +173,26 @@
               <span class="list-icon">
                 <i class="far fa-calendar-plus"></i>
               </span> 
-              <a href="https://calendar.google.com/calendar/ical/g0kdapqkqpi4h880u3gnbtg7qg%40group.calendar.google.com/public/basic.ics">
+              <a href="https://calendar.google.com/calendar/ical/g0kdapqkqpi4h880u3gnbtg7qg%40group.calendar.google.com/public/basic.ics" title="Add to Google Calendar">
                 Add to Google Calendar
               </a>
             </li>
           </ul>
           <h2>About the Eastgate Neighborhood Association</h2>
           <p>
-            The <a href="https://www.eastgategr.com/">ENA</a> serves the Plymouth Heights area in Grand Rapids and offers special event programming, community outreach, and neighborhood resources to ENA residents.
+            The <a href="https://www.eastgategr.com/" title="Eastgate Neighborhood Association">ENA</a> serves the Plymouth Heights area in Grand Rapids and offers special event programming, community outreach, and neighborhood resources to ENA residents.
           </p>
           <h2>Friends of Mulick Park</h2>
           <p>
-            SlothWerks provides technical support for the <a href="http://www.mulickpark.org/">Friends of Mulick Park</a>, which serves as a community liasion to <a href="https://www.facebook.com/mulickpark/">Mulick Park Elementary</a>.  Learn more about Mulick Park on the <a href="https://www.grps.org/">Grand Rapids Public Schools</a> website.
+            SlothWerks provides technical support for the <a href="http://www.mulickpark.org/" title="Friends of Mulick Park">Friends of Mulick Park</a>, which serves as a community liaison to <a href="https://www.facebook.com/mulickpark/" title="Mulick Park Elementary on Facebook">Mulick Park Elementary</a>.  Learn more about Mulick Park on the <a href="https://www.grps.org/" title="Grand Rapids Public Schools">Grand Rapids Public Schools</a> website.
           </p>
+        </div>
+      </div>
+
+      <div id="audioArchives" class="content hidden">
+        <div class="archives-wrapper">
+          <h1>Audio Archives</h1>
+          <p>Insert audio archives here</p>
         </div>
       </div>
 
