@@ -175,21 +175,60 @@ nav ul li .label {
 
 /* Primary Content */
 
-.content-container {
+.content-container { /* Wraps both the content and footer */
   width: 100%;
   flex-grow: 1; /* Stretch to height of view */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .content {
   width: 100%;
+  flex-grow: 1; /* Stretch to fill container */
   display: flex;
   flex-direction: column;
+}
+
+/* Landing Page */
+
+.landing-titles {
+  width: 100%;
+  margin: 40px 0;
+  display: flex;
+  background: center / contain no-repeat url("../assets/imgs/logo-sans-text.png");
+}
+
+.landing-titles span {
+  font-family: "Rabbid Highway Sign II", "Arial Black", "Arial Bold", Gadget, sans-serif;
+  font-size: 2.0em;
+  /* line-height: 1.5em; */
+  margin-bottom: 60px;
+}
+
+.landing-titles span:last-of-type {
+  margin-bottom: 0; /* No margin-bottom for last span */
+}
+
+.image-mask {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 /* Footer */
 
 footer {
   width: 100%;
+  height: 35px;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .copyright {
