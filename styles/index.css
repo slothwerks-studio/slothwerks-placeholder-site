@@ -262,16 +262,12 @@ nav ul li .label {
 
 /* Audio Archives */
 
-.archives-wrapper {
-  margin: 20px 0;
+.archive-wrapper {
+  margin: 20px 0 10px 0;
   width: 100%;
 }
 
-.archives-wrapper:last-child {
-  margin-bottom: 0;
-}
-
-.archives-wrapper h1 {
+.archive-wrapper h1 {
   font-family: "Rabbid Highway Sign II", "Arial Black", "Arial Bold", Gadget, sans-serif;
   font-size: 1.3em;
   margin-bottom: 15px;
@@ -284,6 +280,11 @@ nav ul li .label {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  border: 1px solid black;
+}
+
+.archive-selections:last-child {
+  border-bottom: none;
 }
 
 .archive-card {
@@ -291,21 +292,22 @@ nav ul li .label {
   display: flex;
   flex-direction: column;
   background-color: rgba(67.5, 16.1, 83.1, 0.1);
-  padding: 5px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
 }
 
 .archive-card-info-wrapper {
   width: 100%;
-  height: 80px;
+  height: 100px;
   display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: space-between;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 .image-wrapper {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .image-wrapper img {
@@ -320,7 +322,6 @@ nav ul li .label {
 }
 
 .selection-info > span {
-  font-size: .8em;
   margin-bottom: 3px;
 }
 
@@ -332,26 +333,8 @@ nav ul li .label {
   font-weight: 600;
 }
 
-.selection-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.play-button, .close-button {
-  border: 0;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  font-size: 4.0em;
-}
-
-.play-button span, .close-button span {
-  display: none;
-}
-
 .audio-player {
-  padding: 10px 0 5px 0;
+  padding: 15px 0 5px 0;
   display: flex;
   align-items: center;
   justify-content: center;
