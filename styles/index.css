@@ -400,6 +400,28 @@ nav#menu .label {
   padding: 0 10px;
 }
 
+@media screen and (min-width: 667px) {
+
+  .archive-wrapper {
+    margin-bottom: 0;
+  }
+
+  .archive-selections {
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: none;
+  }
+  
+  .archive-card {
+    width: calc(50% - 5px); /* Width of container less padding in-between */
+    margin-bottom: 10px;
+    border: 1px solid black;
+  }
+  
+}
+
 .image-wrapper {
   height: 100%;
   margin-right: 10px;
