@@ -48,6 +48,24 @@ function toggleMenu() {
   }
 }
 
+// Close the mobile nav menu
+// Need to break this out for compatibility for tablet and desktop menu
+function closeMenu() {
+  console.log("Hide mobile nav menu.");
+  // Scroll to top of page
+  window.scrollTo(0,0);
+  // Hide menu
+  menu.classList.add("hidden");
+  // Re-load current content
+  currentView.classList.remove("hidden");
+  // Unhide footer
+  footer.classList.remove("hidden");
+  // Hide close menu button
+  closeMenuButton.classList.add("hidden");
+  // Show open menu button
+  openMenuButton.classList.remove("hidden");
+}
+
 // Navigation functionality
 // Takes in argument of desired view
 // Hides any current view and shows desired content
@@ -63,11 +81,7 @@ function navigation(view) {
     audioArchives.classList.add("hidden");
     landing.classList.remove("hidden");
     // If menu is currently displayed, hide it and scroll to top of page
-    // We do not use togglemenu here, as this option is not in the menu (it's in the logo in the header bar)
-    menu.classList.add("hidden");
-    footer.classList.remove("hidden");
-    closeMenuButton.classList.add("hidden");
-    openMenuButton.classList.remove("hidden");
+    closeMenu();
   } else if (view === "about") {
     currentView = about; // Update current view
     // The following should work regardless if current view is already about
@@ -76,7 +90,7 @@ function navigation(view) {
     enaCalendar.classList.add("hidden");
     audioArchives.classList.add("hidden");
     about.classList.remove("hidden");
-    toggleMenu();
+    closeMenu()
   } else if (view === "techCalendar") {
     currentView = techCalendar; // Update current view
     // The following should work regardless if current view is already techCalendar
@@ -85,7 +99,7 @@ function navigation(view) {
     enaCalendar.classList.add("hidden");
     audioArchives.classList.add("hidden");
     techCalendar.classList.remove("hidden");
-    toggleMenu();
+    closeMenu()
   } else if (view === "enaCalendar") {
     currentView = enaCalendar;
     // The following should work regardless if current view is already enaCalendar
@@ -94,7 +108,7 @@ function navigation(view) {
     techCalendar.classList.add("hidden");
     audioArchives.classList.add("hidden");
     enaCalendar.classList.remove("hidden");
-    toggleMenu();
+    closeMenu()
   } else if (view === "audioArchives") {
     currentView = audioArchives; // Update current view
     // The following should work regardless if current view is already audioArchives
@@ -103,7 +117,7 @@ function navigation(view) {
     techCalendar.classList.add("hidden");
     enaCalendar.classList.add("hidden");
     audioArchives.classList.remove("hidden");
-    toggleMenu();
+    closeMenu()
   } else {
     currentView = "landing";
     // If argument is unexpected, show landing page
@@ -113,6 +127,6 @@ function navigation(view) {
     enaCalendar.classList.add("hidden");
     audioArchives.classList.add("hidden");
     landing.classList.remove("hidden");
-    toggleMenu();
+    closeMenu()
   }
 }
