@@ -104,6 +104,13 @@ header {
   background-color: inherit; /* To be determined */
 }
 
+@media screen and (min-width: 768px) {
+  header {
+    height: 45px;
+    padding: 0 15px;
+  }
+}
+
 .header-logo {
   height: 60%;
   margin-right: 60px;
@@ -147,11 +154,18 @@ header {
     display: initial;
     height: 35px;
     flex-grow: 1; /* Take up all available space */
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-nav {
+    height: 45px;
   }
 }
 
 .header-nav ul {
-  width: 100%; /* Width controlled by parent nav element */
+  width: 100%; /* Width controlled by arent nav element */
   height: 100%; /* Same height as parent container */
   display: flex;
   flex-direction: row;
@@ -268,6 +282,12 @@ nav#menu .label {
   justify-content: center;
 }
 
+@media screen and (min-width: 768px) {
+  .title-wrapper {
+    padding: 0 15px;
+  }
+}
+
 .title-wrapper span {
   max-width: 320px; /* Forcing titles to stay positioned on top of watermark */
   font-family: "Rabbid Highway Sign II", "Arial Black", "Arial Bold", Gadget, sans-serif;
@@ -283,6 +303,12 @@ nav#menu .label {
   margin: 20px 0;
   width: 100%;
   padding: 0 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .content-info {
+    padding: 0 15px;
+  }
 }
 
 .content-info:last-child {
@@ -330,6 +356,7 @@ nav#menu .label {
   .calendar-wrapper { /* Controls width of iframe */
     display: flex;
     margin: 0 auto;
+    padding: 5px 0 10px 0;
     position: relative; /* Needed for controls */
   }
 }
@@ -345,6 +372,12 @@ nav#menu .label {
   font-weight: normal;
   margin-left: 10px;
   color: #2976D4;
+}
+
+@media screen and (min-width: 768px) {
+  .calendar-wrapper .controls a {
+    margin-left: 15px;
+  }
 }
 
 /* Audio Archives */
@@ -401,7 +434,6 @@ nav#menu .label {
 }
 
 @media screen and (min-width: 667px) {
-
   .archive-wrapper {
     margin-bottom: 0;
   }
@@ -419,15 +451,38 @@ nav#menu .label {
     margin-bottom: 10px;
     border: 1px solid black;
   }
-  
 }
 
-.image-wrapper {
+@media screen and (min-width: 768px) {
+  .archive-wrapper h1 {
+    padding: 0 15px;
+  }
+  
+  .archive-wrapper p {
+    padding: 0 15px;
+  }
+
+  .archive-selections {
+    padding: 15px;
+  }
+
+  .archive-card-info-wrapper .image-wrapper {
+    margin-right: 15px;
+  }
+
+  .archive-card {
+    width: calc(50% - 8px); /* Width of container less padding in-between */
+    margin-bottom: 15px;
+  }
+
+}
+
+.archive-card-info-wrapper .image-wrapper {
   height: 100%;
   margin-right: 10px;
 }
 
-.image-wrapper img {
+.archive-card-info-wrapper .image-wrapper img {
   height: 100%; /* This should re-size the image and maintain ratio */
 }
 
@@ -467,6 +522,13 @@ footer {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    height: 45px;
+    padding: 5px 15px;
+  }
 }
 
 .copyright {
