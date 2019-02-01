@@ -90,7 +90,7 @@ function navigation(view) {
     enaCalendar.classList.add("hidden");
     audioArchives.classList.add("hidden");
     about.classList.remove("hidden");
-    closeMenu()
+    closeMenu();
   } else if (view === "techCalendar") {
     currentView = techCalendar; // Update current view
     // The following should work regardless if current view is already techCalendar
@@ -99,7 +99,7 @@ function navigation(view) {
     enaCalendar.classList.add("hidden");
     audioArchives.classList.add("hidden");
     techCalendar.classList.remove("hidden");
-    closeMenu()
+    closeMenu();
   } else if (view === "enaCalendar") {
     currentView = enaCalendar;
     // The following should work regardless if current view is already enaCalendar
@@ -108,7 +108,7 @@ function navigation(view) {
     techCalendar.classList.add("hidden");
     audioArchives.classList.add("hidden");
     enaCalendar.classList.remove("hidden");
-    closeMenu()
+    closeMenu();
   } else if (view === "audioArchives") {
     currentView = audioArchives; // Update current view
     // The following should work regardless if current view is already audioArchives
@@ -117,7 +117,7 @@ function navigation(view) {
     techCalendar.classList.add("hidden");
     enaCalendar.classList.add("hidden");
     audioArchives.classList.remove("hidden");
-    closeMenu()
+    closeMenu();
   } else {
     currentView = "landing";
     // If argument is unexpected, show landing page
@@ -127,6 +127,6 @@ function navigation(view) {
     enaCalendar.classList.add("hidden");
     audioArchives.classList.add("hidden");
     landing.classList.remove("hidden");
-    closeMenu()
+    closeMenu();
   }
 }

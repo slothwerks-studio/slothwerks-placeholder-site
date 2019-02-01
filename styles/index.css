@@ -80,6 +80,17 @@ body {
   display: none;
 }
 
+/* Responsible styles */
+
+@media screen and (min-width: 667px) {
+  .mobile-only {
+    display: none;
+  }
+  .tablet-and-desktop-only {
+    display: initial;
+  }
+}
+
 /* Header Bar */
 
 header {
@@ -131,8 +142,7 @@ header {
   display: none;
 }
 
-/* Show menu on tablet width or above */
-@media screen and (min-width: 667px) {
+@media screen and (min-width: 667px) { /* Show menu on tablet width or above */
   .header-nav {
     display: initial;
     height: 35px;
@@ -301,8 +311,40 @@ nav#menu .label {
   padding-left: 15px;
 }
 
+.content-info ul li {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
 .list-icon {
   margin-right: 5px;
+}
+
+/* Calendar styles */
+
+.calendar-wrapper { /* Do not display on mobile */
+  display: none;
+}
+
+@media screen and (min-width: 667px) {
+  .calendar-wrapper { /* Controls width of iframe */
+    display: flex;
+    margin: 0 auto;
+    position: relative; /* Needed for controls */
+  }
+}
+
+.calendar-wrapper .controls {
+  position: absolute; /* With respect to the calendar wrapper */
+  top: 0;
+  right: 0;
+}
+
+.calendar-wrapper .controls a {
+  font-size: .9em;
+  font-weight: normal;
+  margin-left: 10px;
+  color: #2976D4;
 }
 
 /* Audio Archives */
