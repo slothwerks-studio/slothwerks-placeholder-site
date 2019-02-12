@@ -161,6 +161,7 @@ header {
 @media screen and (min-width: 768px) {
   .header-nav {
     height: 45px;
+    max-width: 700px;
   }
 }
 
@@ -184,6 +185,12 @@ header {
 .header-nav .icon {
   height: 100%; /* Contains image */
   font-size: 1.5em; /* For font awesome icons */
+}
+
+@media screen and (min-width: 768px) {
+  .header-nav .icon {
+    font-size: 2.0em;
+  }
 }
 
 .header-nav .label {
@@ -310,6 +317,23 @@ nav#menu .label {
     max-width: 700px; /* Forcing titles to stay positioned on top of watermark */
     font-size: 3.0em;
     line-height: 3.5; /* Roughly double-spaced */
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .landing-titles {
+    width: 100%;
+    margin: 40px 0;
+    background: center / contain no-repeat url("../assets/imgs/logo-sans-text.png");
+  }
+  .title-wrapper { /* Includes a watermark image mask for the background image */
+    min-height: 600px;
+    padding: 0 15px;
+  }
+  .title-wrapper span {
+    word-spacing: 4.0em;
+    margin-top: 0;
+    max-width: 100%;
   }
 }
 
