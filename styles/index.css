@@ -569,11 +569,15 @@ nav#menu .label {
 
 @media screen and (min-width: 667px) {
   .archive-wrapper {
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .archive-wrapper h1, .archive-wrapper p {
+    padding: 0;
   }
 
   .archive-selections {
-    padding: 10px;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -588,16 +592,9 @@ nav#menu .label {
 }
 
 @media screen and (min-width: 768px) {
-  .archive-wrapper h1 {
+  .archive-wrapper {
+    margin: 0;
     padding: 0 15px;
-  }
-  
-  .archive-wrapper p {
-    padding: 0 15px;
-  }
-
-  .archive-selections {
-    padding: 15px;
   }
 
   .archive-card-info-wrapper .image-wrapper {
@@ -611,16 +608,9 @@ nav#menu .label {
 }
 
 @media screen and (min-width: 1366px) {
-  .archive-wrapper h1 {
+  .archive-wrapper {
+    margin: 0;
     padding: 0 30px;
-  }
-  
-  .archive-wrapper p {
-    padding: 0 30px;
-  }
-
-  .archive-selections {
-    padding: 30px;
   }
 
   .archive-card-info-wrapper .image-wrapper {
