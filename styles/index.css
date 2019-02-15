@@ -111,6 +111,13 @@ header {
   }
 }
 
+@media screen and (min-width: 1366px) {
+  header {
+    height: 60px;
+    padding: 0 30px;
+  }
+}
+
 .header-logo {
   height: 60%;
   margin-right: 60px;
@@ -165,6 +172,13 @@ header {
   }
 }
 
+@media screen and (min-width: 1366px) {
+  .header-nav {
+    height: 60px;
+    max-width: 800px;
+  }
+}
+
 .header-nav ul {
   width: 100%; /* Width controlled by arent nav element */
   height: 100%; /* Same height as parent container */
@@ -190,6 +204,12 @@ header {
 @media screen and (min-width: 768px) {
   .header-nav .icon {
     font-size: 2.0em;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .header-nav .icon {
+    font-size: 2.5em;
   }
 }
 
@@ -321,14 +341,9 @@ nav#menu .label {
 }
 
 @media screen and (min-width: 1366px) {
-  .landing-titles {
-    width: 100%;
-    margin: 40px 0;
-    background: center / contain no-repeat url("../assets/imgs/logo-sans-text.png");
-  }
   .title-wrapper { /* Includes a watermark image mask for the background image */
     min-height: 600px;
-    padding: 0 15px;
+    padding: 40px 30px 0 30px;
   }
   .title-wrapper span {
     word-spacing: 4.0em;
@@ -337,18 +352,17 @@ nav#menu .label {
   }
 }
 
-/* Content Pages */
+/* Page Content */
 
-.content-info {
-  margin: 20px 0;
+.content {
   width: 100%;
-  padding: 0 10px;
+  margin-bottom: 20px;
+  padding-top: 20px;
 }
 
-@media screen and (min-width: 768px) {
-  .content-info {
-    padding: 0 15px;
-  }
+.content-info {
+  width: 100%;
+  padding: 0 10px;
 }
 
 .content-info:last-child {
@@ -386,28 +400,81 @@ nav#menu .label {
   margin-right: 5px;
 }
 
+@media screen and (min-width: 768px) {
+  .content {
+    margin-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  .content-info {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .content {
+    margin-bottom: 45px;
+    padding-top: 45px;
+  }
+
+  .content-info {
+    padding: 0 30px;
+  }
+
+  .content-info h1 {
+    font-family: "Rabbid Highway Sign II", "Arial Black", "Arial Bold", Gadget, sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .content-info p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .content-info ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+}
+
 /* Calendar styles */
+
+.calendar-content-wrapper {
+  width: 100%;
+}
 
 .calendar-wrapper { /* Do not display on mobile */
   display: none;
 }
 
 @media screen and (min-width: 667px) {
-  .calendar-wrapper { /* Controls width of iframe */
-    display: flex;
+  .calendar-wrapper {
+    display: block;
     margin: 0 auto;
-    padding: 5px 0 10px 0;
-    position: relative; /* Needed for controls */
+    padding: 5px 10px 0 10px;
   }
 }
 
-.calendar-wrapper .controls {
-  position: absolute; /* With respect to the calendar wrapper */
+@media screen and (min-width: 768px) {
+  .calendar-wrapper {
+    padding: 10px 15px 0 15px;
+  }
+}
+
+.calendar { /* Controls width of iframe */
+  width: 100%; 
+  position: relative; /* Needed for controls */
+}
+
+.calendar .controls {
+  position: absolute; /* With respect to the calendar container */
   top: 0;
   right: 0;
 }
 
-.calendar-wrapper .controls a {
+.calendar .controls a {
   font-size: .9em;
   font-weight: normal;
   margin-left: 10px;
@@ -415,8 +482,26 @@ nav#menu .label {
 }
 
 @media screen and (min-width: 768px) {
-  .calendar-wrapper .controls a {
+  .calendar .controls a {
     margin-left: 15px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .calendar-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+  .calendar-content-wrapper .content-info {
+    width: 500px;
+    padding: 0;
+    margin: 0 30px 0 0;
+  }
+  .calendar-wrapper {
+    flex: 1;
+    padding: 0;
   }
 }
 
@@ -473,6 +558,15 @@ nav#menu .label {
   padding: 0 10px;
 }
 
+.archive-card-info-wrapper .image-wrapper {
+  height: 100%;
+  margin-right: 10px;
+}
+
+.archive-card-info-wrapper .image-wrapper img {
+  height: 100%; /* This should re-size the image and maintain ratio */
+}
+
 @media screen and (min-width: 667px) {
   .archive-wrapper {
     margin-bottom: 0;
@@ -514,16 +608,29 @@ nav#menu .label {
     width: calc(50% - 8px); /* Width of container less padding in-between */
     margin-bottom: 15px;
   }
-
 }
 
-.archive-card-info-wrapper .image-wrapper {
-  height: 100%;
-  margin-right: 10px;
-}
+@media screen and (min-width: 1366px) {
+  .archive-wrapper h1 {
+    padding: 0 30px;
+  }
+  
+  .archive-wrapper p {
+    padding: 0 30px;
+  }
 
-.archive-card-info-wrapper .image-wrapper img {
-  height: 100%; /* This should re-size the image and maintain ratio */
+  .archive-selections {
+    padding: 30px;
+  }
+
+  .archive-card-info-wrapper .image-wrapper {
+    margin-right: 30px;
+  }
+
+  .archive-card {
+    width: calc(50% - 15px); /* Width of container less padding in-between */
+    margin-bottom: 30px;
+  }
 }
 
 .selection-info {
@@ -557,21 +664,32 @@ nav#menu .label {
 footer {
   width: 100%;
   height: 35px;
-  padding: 5px 10px;
+  padding: 0 10px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
 }
 
-@media screen and (min-width: 768px) {
-  footer {
-    height: 45px;
-    padding: 5px 15px;
-  }
-}
-
 .copyright {
   font-size: 1em;
   color: inherit /* To be determined */
 }
+
+@media screen and (min-width: 768px) {
+  footer {
+    height: 45px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  footer {
+    height: 60px;
+    padding: 0 30px;
+  }
+  .copyright {
+    font-size: 1.2em;
+  }
+}
+
